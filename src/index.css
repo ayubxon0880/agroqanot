@@ -1,0 +1,211 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* App komponentiga asosiy style */
+.App {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Kontentni asosiy qism uchun */
+.App-content {
+    flex: 1;
+}
+
+
+:root {
+  --max-audio-width: 900px;
+}
+
+audio::-webkit-media-controls-timeline {
+  width: 100%;
+  max-width: 700px;
+}
+
+audio::-webkit-media-controls-panel {
+  width: 100%;
+  max-width: var(--max-audio-width);
+  display: flex;
+  justify-content: space-evenly !important;
+}
+
+audio::-webkit-media-controls-enclosure {
+  border-radius: 0;
+  border: 1px solid rgb(209, 209, 209);
+  background-color: transparent;
+  max-height: 90px;
+}
+
+audio {
+  width: 100%;
+  max-width: var(--max-audio-width);
+  height: 50px;
+}
+
+/* //// */
+
+.vertical-swiper-container {
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.custom-swiper {
+  max-width: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  background: #f0f0f0; /* Change as needed */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.swiper-pagination-bullets {
+  top: 54% !important;
+  right: 20px !important;
+  scale: 1.6;
+}
+
+.sidebar {
+  top: 0;
+  right: 0;
+  max-width: 200px;
+  width: 100%;
+  background-color: transparent;
+  color: #000000;
+  transition: width 0.3s;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  padding: 15px;
+  text-align: center;
+}
+
+.sidebar nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebar nav ul li a:hover {
+  text-decoration: underline;
+}
+
+#home {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap-reverse;
+  gap: 50px;
+  align-items: flex-end;
+}
+
+.vidyo {
+  max-width: 600px;
+  width: 100%;
+  height: 400px;
+}
+
+@media (max-width: 1564px) {
+  .sidebar {
+    margin: auto;
+  }
+}
+
+@media (max-width: 914px) {
+  #home {
+    justify-content: center;
+  }
+}
+
+.asdf {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1px, 1600px));
+}
+
+.article-img {
+  max-width: 1600px;
+}
+
+.article {
+  background-color: #142143;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10%;
+}
+
+/* @media (max-width: 777px) {
+  .article {
+    padding: 20px;
+  }
+} */
+
+
+
+/*                     */
+
+/* Swiper parent container */
+.vertical-swiper-container {
+  width: 100%; 
+}
+
+.custom-swiper {
+  width: 100%;
+}
+
+.swiper-slide-custom {
+  position: relative; 
+  height: auto; /* Takes the size of its content */
+  overflow: hidden; 
+}
+
+.slide-link {
+  position: relative; 
+  width: 100%; 
+  height: 100%; 
+}
+
+.slide-image {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; /* Ensures image fills the container without distortion */
+}
+
+.view-more-text {
+  position: absolute; 
+  bottom: 10px; 
+  left: 10px; 
+  color: #fff; 
+  font-size: 18px; 
+  font-weight: bold; 
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 8px 12px; 
+  border-radius: 8px; 
+  text-transform: capitalize; 
+  transition: 0.3s ease-in-out; 
+}
+
+.view-more-text:hover {
+  background-color: rgba(0, 0, 0, 0.8); 
+}
