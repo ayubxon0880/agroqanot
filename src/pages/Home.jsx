@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import ImagesList from "../pages/Images";
 import whitePlane from "../assets/whitePlane.png";
 import blackPlane from "../assets/blackPlane.png";
+import back from "../assets/1background.png";
+
 
 import ProjectList from "../pages/ProjectList";
 import { ReactCompareSlider, ReactCompareSliderImage } from "react-compare-slider";
@@ -16,9 +18,11 @@ const Home = () => {
       <div className="logo"></div>
       <section
         id="home"
-        className="bg-cover bg-center relative p-6"
+        className="bg-cover bg-center relative p-8"
         style={{
-          // backgroundImage: `url(${team})`,
+          alignItems:"center",
+          height: "800px",
+          backgroundImage: `url(${back})`,
         }}
       >
         <SwiperLanding />
