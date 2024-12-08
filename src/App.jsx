@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { useState } from 'react';
 import { PUBLIC_ROUTES } from './env';
 import Footer from './components/Footer';
+import Navbar from './components/Navbar';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(true);
@@ -9,6 +10,7 @@ function App() {
   return (
     <Router>
     <div className="App">
+      <Navbar/>
       <div>
         <Routes>
           {isAuthenticated && (
